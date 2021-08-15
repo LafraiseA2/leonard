@@ -21,3 +21,9 @@ void nhap(int a[], int &n)      // Khai bao nhap mang
     }
 }
 
+int main()
+{
+    int a[][max];
+    int n;
+    nhap(a,n);
+}
