@@ -21,21 +21,3 @@ void nhap(int a[], int &n)      // Khai bao nhap mang
     }
 }
 
-int capsocong(int a[], int n)
-{
-    int d = a[2] - a[1];
-    for(int i = 2; i < n; i++)
-    {
-        if(a[i + 1] - a[i] != d)
-            return 0;
-    }
-    return 1;
-}
-int main()
-{
-    int a[max];
-    int n;
-    nhap(a,n);
-    // Xuat ket qua
-    cout << capsocong(a,n);
-}
