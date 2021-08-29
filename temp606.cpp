@@ -214,10 +214,60 @@ ngaythang ngayketiepk(nt a, int k)
     }
     return b;
 }
+// Bài 602: Tìm ngày hôm qua
+ngaythang homqua(nt a)
+{
+    if(a.ngay > 1)
+    {
+        a.ngay--;
+    }
+    else if(a.thang > 1) //ngay bang 1
+    {
+        a.thang--;
+        a.ngay = songaytrongthang(a);        
+    }
+    else
+    {
+        a.ngay = 31;
+        a.thang = 12;    //thang = 1
+        a.nam--;
+    }
+    return a;
+}
+
+// Bài 603: Tìm ngày kế đó k ngày(tuong duong tim ngay ke tiep k lan)
+ngaythang ngayketiepk(nt a, int k)
+{
+    while(k > 0)
+    {
+        a = ngayketiep(a);
+        k--;
+    }
+    return a;
+}
 // Bài 604: Tìm ngày trước đó k ngày
+ngaythang timngaytruocdo(nt a, int k)
+{
+    while(k > 0)
+    {
+        a = homqua(a);
+        k--;
+    }
+    return a;
+}
 // Bài 605: Khoảng cách giữa 2 ngày
 // Bài 606: So sánh 2 ngày
-// Tính thứ của ngày bất kỳ trong năm(Dùng CT Zeller)
+void sosanh2ngay(nt a, nt b)
+{
+    float sa = sothuthu(a);
+    float sb = sothuthu(b);
+    if(sa > sb)
+    {
+        cout <<"Ngay a lon hon ngay b.";
+    }
+    else cout <<"Ngay b lon hon ngay a.";
+    cout << endl;
+}
 
 int main()
 {
