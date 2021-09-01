@@ -14,6 +14,7 @@ void debai(int a)
 // Bài 703: Hãy cài đặt hàm đệ quy tính T(n) = n! = 1 x 2 x 3 x … x n. Trong đó T(0) = 1
 // Bài 704: Cho mảng 1 chiều các số nguyên. Viết hàm tính tổng các số chẵn trong mảng bằng phương pháp đệ quy
 // Bài 705: Cho mảng 1 chiều các số nguyen. Viết hàm đếm số lượng giá trị dương trong mảng bằng phương pháp đệ quy
+// Tim uoc chung lon nhat cua hai so nguyen a va b
 }
 
 void nhap(int a[], int &n)
