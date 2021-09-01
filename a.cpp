@@ -72,10 +72,18 @@ int demduong(int a[], int n)
     return demduong(a, n - 1);
 }
 
+int uocchung(int a, int b)
+{
+    if(b == 0)
+        return a;
+    return uocchung(a, a % b);
+}
+
 int main()
 {
     int a[max];
     int n,n1,n2;
+    int a, b;
 
     cout <<"Bai 702: \n";
     cout <<"Nhap so gia tri: "; cin >> n1;
@@ -91,5 +99,10 @@ int main()
 
     cout <<"Tong chan: " << tongchan(a,n) << endl;
     cout <<"Tong so cac so duong: " << demduong(a,n) << endl;
+
+    cout <<"Tim uocchung: \n";
+    cout <<"Nhap a: "; cin >> a;
+    cout <<"Nhap b: "; cin >> b;
+    cout <<"Uoc chung lon nhat cua " << a << " va " << b << " : " << uocchung(a,b);
     return 0;
 }
